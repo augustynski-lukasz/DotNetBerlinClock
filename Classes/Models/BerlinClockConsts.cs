@@ -2,10 +2,6 @@
 {
     public static class BerlinClockConsts
     {
-        public const char EmptyLight = 'O';
-        public const char YellowLight = 'Y';
-        public const char RedLight = 'R';
-
         public const uint EveryXSecondOn = 2;
 
         public const int HoursToRepresent = 24;
