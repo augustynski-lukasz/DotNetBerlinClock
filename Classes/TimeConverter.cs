@@ -1,15 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace BerlinClock
+﻿namespace BerlinClock
 {
     public class TimeConverter : ITimeConverter
-    {
+    {        
         public string convertTime(string aTime)
         {
-            throw new NotImplementedException();
+            using (var berlinClock = new BerlinClockModel(aTime))
+            {
+                if (berlinClock.Init())
+                {
+                    return berlinClock.ToString();
+                }
+
+                return string.Empty;
+            }
         }
     }
 }
